@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: antiquewhite;
+}
+
+.hvr-btn {
+
+    /* Placing button in center */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*  Button Styling */
+    
+    width: 100px;
+    height: 60px;
+    text-decoration: none;
+    background-color: #f6ff76;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: darkmagenta;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.hvr-btn span {
+    display: block;
+    background-color: darkmagenta;
+    transition: all .2s ease-in-out;
+}
+
+.hvr-btn span:nth-child(odd) {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+}
+
+.hvr-btn span:nth-child(even) {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+}
+
+/* Custom Border Default Positioning */
+
+.hvr-btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+}
+
+.hvr-btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+}
+
+.hvr-btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+}
+
+.hvr-btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+}
+
+/* Custom Border Hover Effect */
+
+.hvr-btn:hover span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.hvr-btn:hover span:nth-child(2) {
+    top: 0;
+    right: 0;
+    transition-delay: .2s;
+}
+
+.hvr-btn:hover span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    transition-delay: .4s;
+}
+
+.hvr-btn:hover span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transition-delay: .6s;
+}
